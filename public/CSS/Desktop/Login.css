@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --mainColor: rgb(23, 22, 29);
+    --accentColor: rgb(224, 121, 54);
+    --hoverColor: rgb(48, 48, 48);
+    --textColor1: rgb(116, 116, 116);
+    --textColor2: rgb(255, 255, 255);
+    --darkWhite: rgb(226, 226, 226);
+    --snowWhite: rgb(241, 241, 241);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--mainColor);
+}
+body .logo {
+    color: var(--textColor2);
+    position: absolute;
+    margin: 2vw;
+    top: 2vh;
+    left: 1vw;
+    font-size: 2rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+body .message {
+    position: absolute;
+    width: 30vw;
+    left: 35vw;
+    height: 5vh;
+    -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    top:6.5vh;
+    display: none;
+    color: var(--textColor2);
+    font-size: 2vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    text-align: center;
+}
+body .backgroundImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../../Images/Main/maskersbackgroundimg.png");
+    background-size: cover;
+}
+body main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body main .loginWrapper {
+    width: 50vw;
+    height: 60vh;
+    -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    background: var(--snowWhite);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+body main .loginWrapper h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    margin-top: 4vh;
+    font-size: 3rem;
+    font-family: "Montserrat";
+}
+body main .loginWrapper .inputWrapper {
+    width: 100%;
+    height: 35%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body main .loginWrapper .inputWrapper input[type="text"] {
+    width: 40%;
+    margin: 2vh;
+    height: 25%;
+    background: transparent;
+    border: none;
+    border-bottom: 0.25vh solid var(--mainColor);
+    color: var(--mainColor);
+}
+body main .loginWrapper .passwordWrapper {
+    display: flex;
+    width: 40%;
+    height: 25%;
+    border-bottom: 0.25vh solid var(--mainColor);
+    align-items: center;
+    justify-content: space-between;
+}
+body main .loginWrapper .passwordWrapper input[type="password"],
+body main .loginWrapper .passwordWrapper input[type="text"] {
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    margin: 0;
+    color: var(--mainColor);
+    border: none;
+}
+body main .loginWrapper .passwordWrapper img {
+    width: 35px;
+    height: 50%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+body main .loginWrapper .passwordWrapper #login-showPassword {display: flex;}
+body main .loginWrapper .passwordWrapper #login-hidePassword {display: none;}
+body main .loginWrapper button {
+    width: 20%;
+    height: 10%;
+    border: 0.25vh solid var(--mainColor);
+    display: flex;
+    align-items: center;
+    font-size: 2vh;
+    font-weight: bold;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+}
+body main .loginWrapper button:hover,
+body main .loginWrapper button:focus {
+    color: var(--accentColor);
+    border-color: var(--accentColor);
+    transition: 0.5s;
+}
+body main .loginWrapper .btnWrapper {
+    width: 40%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5%;
+}
+body main .loginWrapper .btnWrapper .forgot {
+    width: 100%;
+    font-size: 1.3vh;
+    cursor: pointer;
+    border: none;
+    margin-top: 1%;
+    font-weight: lighter;
+}
+body main .loginWrapper .btnWrapper .forgot:hover, 
+body main .loginWrapper .btnWrapper .forgot:focus {
+    color: var(--accentColor);
+    transition: 0.5s;
+}
+body main .loginWrapper .btnWrapper .registerBtn {
+    width: 100%;
+    margin-top: 5%;
+    font-size: 1.5vh;
+    border: none;
+    cursor: initial;
+    font-weight: lighter;
+}
+body main .loginWrapper .btnWrapper .registerBtn span {
+    color: var(--accentColor);
+    cursor: pointer;
+    margin-left: 5px;
+}
+body main .loginWrapper .btnWrapper .registerBtn:hover {color: var(--mainColor);}
+body main .loginWrapper .btnWrapper .registerBtn:hover span {color: var(--mainColor); transition: .5s;}
+
+body main .registerWrapper {
+    width: 75vw;
+    height: 50vh;
+    -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    background: rgb(241, 241, 241);
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+body main .registerWrapper h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+    font-size: 3rem;
+    font-family: "Montserrat";
+}
+body main .registerWrapper .inputWrapper {
+    width: 100%;
+    height: 40%;
+}
+body main .registerWrapper .inputWrapper .row {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+body main .registerWrapper .inputWrapper .row input[type="text"],
+body main .registerWrapper .inputWrapper .row input[type="email"] {
+    width: 25%;
+    height: 70%;
+    background: transparent;
+    margin: 0;
+    border: none;
+    border-bottom: .25vh solid var(--mainColor);
+    color: var(--mainColor);
+}
+body main .registerWrapper .inputWrapper .row .passwordWrapper {
+    display: flex;
+    width: 25%;
+    height: 70%;
+    border-bottom: .25vh solid var(--mainColor);
+    align-items: center;
+    justify-content: space-between;
+}
+body main .registerWrapper .inputWrapper .row .passwordWrapper input[type="password"],
+body main .registerWrapper .inputWrapper .row .passwordWrapper input[type="text"] {
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    margin: 0;
+    color: var(--mainColor);
+    border: none;
+}
+body main .registerWrapper .inputWrapper .row .passwordWrapper img {
+    width: 35px;
+    height: 50%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+body main .registerWrapper .inputWrapper .row .passwordWrapper #register-showPassword {display: flex;}
+body main .registerWrapper .inputWrapper .row .passwordWrapper #register-hidePassword {display: none;}
+body main .registerWrapper .inputWrapper .row .passwordWrapper #register-showconfirmPassword {display: flex;}
+body main .registerWrapper .inputWrapper .row .passwordWrapper #register-hideconfirmPassword {display: none;}
+body main .registerWrapper .btnWrapper {
+    width: 80%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+body main .registerWrapper .btnWrapper #registerBtn {
+    width: 20%;
+    height: 45%;
+    border: 0.25vh solid var(--mainColor);
+    display: flex;
+    align-items: center;
+    font-size: 2vh;
+    font-weight: bold;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+}
+body main .registerWrapper .btnWrapper #returnBtn {
+    margin-top: 1vh;
+    font-size: 1.25rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+body main .registerWrapper .btnWrapper #registerBtn:hover,
+body main .registerWrapper .btnWrapper #registerBtn:focus {
+    color: var(--accentColor);
+    border-color: var(--accentColor);
+    transition: 0.5s;
+}
+body main .registerWrapper .btnWrapper #returnBtn:hover,
+body main .registerWrapper .btnWrapper #returnBtn:focus {
+    color: var(--accentColor);
+    transition: 0.5s;
+}
+body main .registerWrapper .usersagreement {
+    position: relative;
+    font-size: .7em;
+    color: var(--textColor1);
+}
+body main .registerWrapper .usersagreement #agreement {
+    color: var(--mainColor);
+    cursor: pointer;
+}
+body main .registerWrapper .usersagreement #agreement:hover,
+body main .registerWrapper .usersagreement #agreement:focus {
+    color: var(--accentColor);
+    transition: 0.5s;
+}
+
+body main .loginWrapper .inputWrapper input[type="text"]:hover,
+body main .loginWrapper .inputWrapper input[type="text"]:focus,
+body main .loginWrapper .inputWrapper .passwordWrapper:hover, 
+body main .loginWrapper .inputWrapper .passwordWrapper:focus-within
+body main .registerWrapper .inputWrapper .row input[type="text"]:hover, 
+body main .registerWrapper .inputWrapper .row input[type="text"]:focus,
+body main .registerWrapper .inputWrapper .row input[type="email"]:hover, 
+body main .registerWrapper .inputWrapper .row input[type="email"]:focus,
+body main .registerWrapper .inputWrapper .row .passwordWrapper:hover, 
+body main .registerWrapper .inputWrapper .row .passwordWrapper:focus-within
+{
+    border-color: var(--accentColor);
+    transition: 0.5s;
+}

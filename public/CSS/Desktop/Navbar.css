@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --mainColor: rgb(23, 22, 29);
+    --accentColor: rgb(224, 121, 54);
+    --hoverColor: rgb(48, 48, 48);
+    --textColor1: rgb(116, 116, 116);
+    --textColor2: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+nav {
+    position: relative;
+    width: 99vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+nav img {
+    position: relative;
+    width: 15vw;
+    height: 100%;
+    text-decoration: none;
+    margin: 0;
+    list-style: none;
+}
+nav #Desktop {
+    position: relative;   
+    color: var(--mainColor);
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1.6rem;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: 10vw;
+}
+nav #Desktop li {
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+}
+nav #Desktop li a { 
+    color: var(--textColor);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+nav #Desktop li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: var(--accentColor);
+    transition: width .3s;
+}
+nav #Desktop li a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+nav #Desktop li a:hover {color: var(--hoverColor);}
+nav .hamburger {display: none;}
+nav #Phone {display: none;}

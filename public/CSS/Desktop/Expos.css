@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --mainColor: rgb(23, 22, 29);
+    --accentColor: rgb(224, 121, 54);
+    --hoverColor: rgb(48, 48, 48);
+    --textColor1: rgb(116, 116, 116);
+    --textColor2: rgb(255, 255, 255);
+    --darkWhite: rgb(226, 226, 226);
+    --snowWhite: rgb(241, 241, 241);
+}
+main .header {
+    width: 100%;
+    height: 30vh;
+    background: var(--mainColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .header h1 {
+    color: var(--textColor2);
+    font-family: Qwigley;
+    font-size: 15vh;
+    font-weight: lighter;
+    width: 100%;
+    text-align: center;
+}
+main .expowrapper {
+    margin-block: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.expandableMenu {
+    width: 70%;
+    margin-block: 1vh;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.expandableMenu .bar {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.expandableMenu .bar h2 {
+    margin-left: 1vw;
+    font-size: 1.2em;
+    color: var(--mainColor);
+}
+.expandableMenu .bar span {
+    text-decoration: none;
+    margin-right: 2vw;
+    font-size: 1.5em;
+}
+.expandableMenu .gallery {
+    height: auto;
+    display: none;
+    flex-wrap: wrap;
+    width: fit-content;
+    justify-content: center;
+    margin-block: 2vh;
+}
+.expandableMenu .gallery img {
+    height: 30vh;
+    width: 30vh;
+    margin: 1vh;
+    object-fit: cover;
+    background: url('../../Images/Main/loading.gif');
+    background-position: center;
+}
+.expandableMenu .gallery video {
+    height: 30vh;
+    width: 62vh;
+    margin: 1vh;
+    object-fit: cover;
+}
+.expandableMenu .dropdown {
+    display: none;
+}
+.toggle .dropdown { 
+    width: 100%;
+    display: flex; 
+}
+.toggle .bar span {
+    color: var(--accentColor);
+    transform: rotate(90deg);
+}
+.upcommingExpo {
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+0}
+.upcommingExpo img {
+    width: 30vw;
+    height: 30vh;
+    border: 1px solid red;
+}
+.upcommingExpo .info {
+    width: 35vw;
+    border: 1px solid red;
+}

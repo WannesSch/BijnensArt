@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --mainColor: rgb(23, 22, 29);
+    --accentColor: rgb(224, 121, 54);
+    --hoverColor: rgb(48, 48, 48);
+    --textColor1: rgb(116, 116, 116);
+    --textColor2: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    width: 100%;
+}
+main {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10vh;
+}
+
+section:nth-of-type(1) {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    height: 50vh;
+    background: var(--mainColor);
+    display: flex;
+    align-items: center; 
+}
+section:nth-of-type(1) h1 {
+    color: var(--textColor2);
+    font-size: 14vh;
+    font-family: Qwigley;
+    margin-left: 15%;
+    font-weight: normal;
+}
+.Home-Picture-1 {
+    position: absolute;
+    right: 5%;
+    width: 40%;
+    height: 90%;
+    text-align: center;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 3vh;
+    color: var(--textColor2);
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+.Home-Picture-1 img {
+    width: 100%;
+    height: 100%;
+}
+.Picture1-Text-Centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100%;
+}
+section:nth-of-type(2) {
+    position: relative;
+    width: 100%;
+    height:70vh;
+    text-align: center;
+    align-items: center;
+}
+section:nth-of-type(2) h2 {
+    font-family: 'Charmonman', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+section:nth-of-type(2) .Index-Main-Div {
+    width: 70%;
+    height: auto;
+    position: relative;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    flex-flow: row wrap;
+    border: 3px ridge var(--mainColor);
+}
+section:nth-of-type(2) .Index-Main-Div .art-item {
+    flex: 0 0 20vw;
+    justify-self: start;
+    width: 25vw;
+    height: 35vh;
+    background: rgb(252, 252, 252);
+    border: 3px ridge rgba(190, 190, 190, 0.3);
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    box-shadow: 3px 3px rgba(0,0,0,.15);
+    cursor: pointer;
+    margin: 1vw;
+}
+section:nth-of-type(2) .Index-Main-Div .art-item img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+section:nth-of-type(2) .Index-Main-Div .art-item .art-data {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+section:nth-of-type(2) .Index-Main-Div .art-item .art-data > *{
+    text-align: center;
+}
+section:nth-of-type(2) .Index-Main-Div .art-item .art-data h1 {
+    font-weight: unset;
+    font-size: 2.5vh;
+    color: var(--mainColor);
+}
+section:nth-of-type(2) .Index-Main-Div .art-item .art-data h2 {
+    font-weight: unset;
+    color: var(--mainColor);
+    font-size: 1.75vh;
+    font-family: 'Montserrat', sans-serif;
+}
+section:nth-of-type(2) .Index-Main-Div .art-item .art-data h3 {
+    font-weight: unset;
+    color: var(--textColor1);
+    font-size: 2vh;
+}

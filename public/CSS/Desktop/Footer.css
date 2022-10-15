@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --mainColor: rgb(23, 22, 29);
+    --accentColor: rgb(224, 121, 54);
+    --hoverColor: rgb(48, 48, 48);
+    --textColor1: rgb(116, 116, 116);
+    --textColor2: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+footer .row {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--mainColor);
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer .row .col {
+    flex: 0 0 25vw;
+    color: var(--textColor2);
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+footer .row .col h3 {
+    font-size: 2.5vh;
+    margin-bottom: 5vh;
+}
+footer .row .col:nth-of-type(1) p {font-size: 1.75vh;}
+footer .row .col:nth-of-type(2) .contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 2vh;
+}
+footer .row .col:nth-of-type(2) .contact img {
+    width: 2vw;
+    height: 100%;
+    filter: invert(100%);
+    z-index: 0;
+}
+footer .row .col:nth-of-type(2) .link:hover img {filter: invert(63%) sepia(30%) saturate(3794%) hue-rotate(338deg) brightness(93%) contrast(87%);}
+footer .row .col:nth-of-type(2) .link:hover span  {color: var(--accentColor);}
+
+footer .row .col:nth-of-type(3) {
+    min-width: 40vw;
+    height: 80%;
+}
+footer .row .col:nth-of-type(3) ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-block: 2.5vh;
+}
+footer .row .col:nth-of-type(3) ul li a {
+    font-weight: bold;
+    font-size: 1.75vh;
+    cursor: pointer;
+    margin-right: 3vh;
+    color: var(--textColor2);
+    text-decoration: none;
+}
+footer .row .col:nth-of-type(3) ul li:hover a {color: var(--accentColor);}
+footer .row .col:nth-of-type(3) span {
+    color: var(--textColor2);
+    margin-bottom: 1vh;
+}
+footer .row .col:nth-of-type(3) .subscribe {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    background: rgb(241, 241, 241);
+}
+footer .row .col:nth-of-type(3) .subscribe input[type="text"] {
+    width: 70%;
+    margin: 2vh;
+    height: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(23, 22, 29);
+    color: rgb(23, 22, 29);
+}
+footer .row .col:nth-of-type(3) .subscribe input[type="text"]:hover {border-color: var(--accentColor);}
+footer .row .col:nth-of-type(3) .subscribe input[type="text"]:focus {border-color: var(--accentColor);}
+footer .row .col:nth-of-type(3) .subscribe button {
+    width: 20%;
+    height: 80%;
+    border: none;
+    background: transparent;
+    border: 2px solid var(--mainColor);
+    font-size: 1.5vh;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 1vh;
+}
+footer .row .col:nth-of-type(3) .subscribe button:hover {
+    border-color: var(--accentColor);
+    color: var(--accentColor);
+    transition: .5s;
+}
+
+footer .row .spacer {
+    width: 2px;
+    height: 90%;
+    background: var(--accentColor);
+}
+footer h4 {
+    width: 100%;
+    height: 3vh;
+    color: var(--textColor1);
+    opacity: 0.3;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    margin: 0;
+    justify-content: center;
+}

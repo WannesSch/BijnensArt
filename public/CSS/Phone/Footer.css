@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --mainColor: rgb(23, 22, 29);
+    --accentColor: rgb(224, 121, 54);
+    --hoverColor: rgb(48, 48, 48);
+    --textColor1: rgb(116, 116, 116);
+    --textColor2: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+footer .row {
+    width: 100%;
+    height: 90%;
+    padding-block: 5vh;
+    background: var(--mainColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+footer .row .col {
+    color: var(--textColor2);
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin-block: 2vh;
+}
+footer .row .col h3 {
+    font-size: 3vh;
+    margin-bottom: 2vh;
+}
+footer .row .col:nth-of-type(1) {
+    width: 80%;
+    height: 30%;
+}
+footer .row .col:nth-of-type(1) p {
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+footer .row .col:nth-of-type(2) {
+    width: 80%;
+    height: 30%;
+    padding: 1vh;
+}
+footer .row .col:nth-of-type(2) .contact {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 2vh;
+}
+footer .row .col:nth-of-type(2) .contact span {
+    width: auto;
+}
+footer .row .col:nth-of-type(2) .contact img {
+    width: 7.5%;
+    height: 100%;
+    filter: invert(100%)
+}
+footer .row .col:nth-of-type(2) .link:hover img {
+    filter: invert(63%) sepia(30%) saturate(3794%) hue-rotate(338deg) brightness(93%) contrast(87%);
+}
+footer .row .col:nth-of-type(2) .link:hover span  {color: var(--accentColor);}
+
+footer .row .col:nth-of-type(3) {
+    width: 80%;
+    height: 40%;
+}
+footer .row .col:nth-of-type(3) ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 2vh;
+}
+footer .row .col:nth-of-type(3) ul li {
+    text-align: start;
+    margin-block: .25vh;
+}
+footer .row .col:nth-of-type(3) ul li a {
+    font-weight: bold;
+    font-size: 2vh;
+    cursor: pointer;
+    margin-right: 3vh;
+    color: var(--textColor2);
+    text-decoration: none;
+}
+footer .row .col:nth-of-type(3) ul li:hover a {
+    color: var(--accentColor);
+}
+footer .row .col:nth-of-type(3) span {
+    color: var(--textColor2);
+    margin-bottom: 1vh;
+}
+footer .row .col:nth-of-type(3) .subscribe {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    background: rgb(241, 241, 241);
+}
+footer .row .col:nth-of-type(3) .subscribe input[type="text"] {
+    width: 70%;
+    margin: 2vh;
+    height: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(23, 22, 29);
+    color: rgb(23, 22, 29);
+}
+footer .row .col:nth-of-type(3) .subscribe input[type="text"]:hover {border-color: var(--accentColor);}
+footer .row .col:nth-of-type(3) .subscribe input[type="text"]:focus {border-color: var(--accentColor);}
+footer .row .col:nth-of-type(3) .subscribe button {
+    width: 20%;
+    height: 80%;
+    border: none;
+    background: transparent;
+    border: 2px solid var(--mainColor);
+    font-size: 1.5vh;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 1vh;
+}
+footer .row .col:nth-of-type(3) .subscribe button:hover {
+    border-color: var(--accentColor);
+    color: var(--accentColor);
+    transition: .5s;
+}
+
+footer .row .spacer {
+    width: 80%;
+    border: 2px solid var(--accentColor);
+}
+footer h4 {
+    width: 100%;
+    height: 5vh;
+    color: var(--textColor1);
+    opacity: .3;
+    text-align: center;
+    font-size: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+    footer .row .col:nth-of-type(3) span {display: none;}
+    footer .row .col:nth-of-type(3) .subscribe {display: none;}
+}

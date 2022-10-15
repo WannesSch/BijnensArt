@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>BijnensArt - Contact</title>
+        <link rel="icon" href="Images/Main/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Charmonman&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Qwigley&display=swap" rel="stylesheet">
+        <meta name="keywords" content="art, kunst, abstract, schilderijen, kunstwerken, sculpturen, dotpainting, kleuren, cirkels, vormen, symbolen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="CSS/Desktop/Contact.css">
+        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="CSS/Desktop/Navbar.css">
+        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="CSS/Desktop/Footer.css">
+
+        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="CSS/Phone/Contact.css">
+        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="CSS/Phone/Navbar.css">
+        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="CSS/Phone/Footer.css">
+    </head>
+
+    <body>
+        
+        <header>
+            <nav>
+                <a href="index.html"><img src="Images/Main/BijnensArtLogo.png" alt="Logo BijnensArt"></a>
+                <ul id="Desktop">
+                    <li><a href=index.html>Home</a></li>
+                    <li><a href=Info.html>Info</a></li>
+                    <li><a href=Art.html>Kunstwerken</a></li>
+                    <li><a href=Expos.html>Expo's</a></li>
+                    <li><a href=Contact.html>Contact</a></li>
+                    <li><a href=Login.html>Login</a></li>
+                </ul>
+                <div class="hamburger" onclick="controls.OpenNavbar()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul id="Phone">
+                    <li><a href=index.html>Home</a></li>
+                    <li><a href=Info.html>Info</a></li>
+                    <li><a href=Art.html>Kunstwerken</a></li>
+                    <li><a href=Expos.html>Expo's</a></li>
+                    <li><a href=Contact.html>Contact</a></li>
+                    <li><a href=Login.html>Login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="Message"></div>
+            <section>
+                <h1>Contact</h1>
+                <div class="wrapper">
+                    <div class="data">
+                        <h2>Atelier BijnensArt</h2>
+                        <p>Liersesteenweg 38 Aarschot</p>
+                        <p>Open atelierdagen:</p>
+                        <p>Woensdag 14:00-18:00</p>
+                        <p>Zaterdag 14:00 - 18:00</p>
+                    </div>
+                    <div class="Contact-Map">
+                            <iframe id="mapCanvas" src="https://maps.google.com/maps?q=liersesteenweg%2038&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="contactFrame">
+                    <div class="left">
+                        <img src="Images/Main/contact.jpg" alt="Foto Anja Bijnens">
+                        <p>
+                            Heb je interesse in een van mijn 
+                            kunstwerken of wil je meer<br>
+                            info? Stuur ons een bericht en wij <br>
+                            antwoorden zo snel mogelijk.
+                        </p>
+                        <p>
+                            Prijzen variërend tussen 50,- en 2000,-
+                        </p>
+                        <p style="font-weight: bold">
+                            anja.bijnens@outlook.com
+                        </p>
+                    </div>
+                    <div class="right">
+                        <h2>Contacteer mij</h2>
+                        <div class="row">
+                            <form>
+                                <label for="mailname">Achternaam*</label>
+                                <input type="text" id="mailname" placeholder="bv. Janssens">
+                            </form>
+                            <form>
+                                <label for="mailprename">Voornaam*</label>
+                                <input type="text" id="mailprename" placeholder="bv. Jan">
+                            </form>
+                        </div>
+                        <div class="row">
+                            <form>
+                                <label for="emailinput">E-mail*</label>
+                                <input type="text" id="emailinput" placeholder="bv. Jan.Janssens@gmail.com">
+                            </form>
+                            <form>
+                                <label for="phoneinput">Telefoon</label>
+                                <input type="text" id="phoneinput" placeholder="bv. 0412 34 56 78">
+                            </form>
+                        </div>
+                        <div class="row-last">
+                            <label for="mailsubject">Onderwerp*</label>
+                            <input type="text" id="mailsubject">
+                            <label for="messageinput">Uw bericht*</label>
+                            <textarea rows="4" cols="50" id="messageinput"></textarea>
+                        </div>
+                        <button name="MessageSubmit" class="Contact-Message-Submit" onclick="controls.SendEmail()">Verstuur</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <h3>Wie is Bijnens A.rt?</h3>
+                    <p>
+                        Bijnens Anja is een kunstenares die vormen, lijnen, structuren en abstracte figuren 
+                        gebruikt en dit zowel op doek als op sculpturen. Voor elke vorm gebruikt ze tot 4 lagen verf en dit in felle kleuren. Waardoor er
+                        in elk schilderij of sculptuur heel wat werk kruipt. Bij de afwerking gebruikt ze een stiptechniek "Dotpainting".
+                    </p>
+                </div>
+                <span class="spacer"></span>
+                <div class="col">
+                        <h3>Gegevens</h3>
+                        <div class="contact">
+                            <img src="Images/Main/phoneIcon.png" alt="Telefoon logo">
+                            <span>0494 99 39 71</span>
+                        </div>
+                        <div class="contact">
+                            <img src="Images/Main/emailIcon.png" alt="Email logo">
+                            <span>anja.bijnens@outlook.com</span>
+                        </div>
+                        <div class="contact link" onclick="Controls.redirect('Instagram')">
+                            <img src="Images/Main/instagramIcon.png" alt="Instagram logo">
+                            <span>Instagram</span>
+                        </div>
+                        <div class="contact link" onclick="Controls.redirect('Facebook')">
+                            <img src="Images/Main/facebookIcon.png" alt="Facebook logo">
+                            <span>Facebook</span>
+                        </div>
+                </div>
+                <span class="spacer"></span>
+                <div class="col">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Info.html">Info</a></li>
+                            <li><a href="Art.html">Kunstwerken</a></li>
+                            <li><a href="Contact.html">Contact</a></li>
+                            <li><a href="Login.html">Login</a></li>
+                        </ul>
+                        <span>Blijf op de hoogte!</span>
+                        <div class="subscribe">
+                            <input type="text" placeholder="email">
+                            <button>Subscribe</button>
+                        </div>
+                </div>
+            </div>
+            
+
+            <h4>BijnensArt since 2019 - Copyright Ⓒ All rights reserved - Website design provided by Wannes Schillebeeckx</h4>
+        </footer>
+
+        <script>
+            function initMap() {
+                var Atelier = {lat: 50.999341, lng: 4.831092};
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 17, center: Atelier});
+                var marker = new google.maps.Marker({position: Atelier, map: map});
+            }
+        </script>
+        <script async defer 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmkhU-ck7AjZln_M_NaH9DchCOxyNHM0&callback=initMap">
+        </script>
+        <script src="JavaScript/Contact.js"></script>
+        <script defer src="JavaScript/Shared.js"></script>
+
+    </body>
+</html>

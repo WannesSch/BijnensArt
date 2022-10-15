@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>BijnensArt - Kunstwerken</title>
+        <link rel="icon" href="Images/Main/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Charmonman&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Qwigley&display=swap" rel="stylesheet">
+        <meta name="keywords" content="art, kunst, abstract, schilderijen, kunstwerken, sculpturen, dotpainting, kleuren, cirkels, vormen, symbolen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" media="screen and (min-width: 900px)" href="CSS/Desktop/Art.css">
+        <link rel="stylesheet" media="screen and (min-width: 900px)" href="CSS/Desktop/Navbar.css">
+        <link rel="stylesheet" media="screen and (min-width: 900px)" href="CSS/Desktop/Footer.css">
+
+        <link rel="stylesheet" media="screen and (max-width: 900px)" href="CSS/Phone/Art.css">
+        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="CSS/Phone/Navbar.css">
+        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="CSS/Phone/Footer.css">
+    </head>
+
+    <body>
+        <div class="darkOverlay">
+            <img src="Images/Main/closeIcon.png" alt="Close icon" onclick="controls.ClosePaintingMenu()">
+            <div class="wrapper">
+                <button onclick="controls.CyclePaintings('Left')" class="buttonLeft">&#x2770;&#x2770;</button>
+                <div class="painting"></div>
+                <button onclick="controls.CyclePaintings('Right')" class="buttonRight">&#x2771;&#x2771;</button>
+            </div>
+            <div class="previewWrapper"></div>
+        </div>
+        <header>
+            <nav>
+                <a href="index.html"><img src="Images/Main/BijnensArtLogo.png" alt="Logo BijnensArt"></a>
+                <ul id="Desktop">
+                    <li><a href=index.html>Home</a></li>
+                    <li><a href=Info.html>Info</a></li>
+                    <li><a href=Art.html>Kunstwerken</a></li>
+                    <li><a href=Expos.html>Expo's</a></li>
+                    <li><a href=Contact.html>Contact</a></li>
+                    <li><a href=Login.html>Login</a></li>
+                </ul>
+                <div class="hamburger" onclick="controls.OpenNavbar()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul id="Phone">
+                    <li><a href=index.html>Home</a></li>
+                    <li><a href=Info.html>Info</a></li>
+                    <li><a href=Art.html>Kunstwerken</a></li>
+                    <li><a href=Expos.html>Expo's</a></li>
+                    <li><a href=Contact.html>Contact</a></li>
+                    <li><a href=Login.html>Login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>Kunstwerken</h1>
+            </section>
+            <section>
+                <ul>
+                    <li class="selected" id="newestFirst" onclick="controls.ChangeSortType('newestFirst')">Nieuw -> Oud</li>
+                    <li id="oldestFirst" onclick="controls.ChangeSortType('oldestFirst')">Oud -> Nieuw</li>
+                    <li id="paintings" onclick="controls.ChangeSortType('paintings')">Schilderijen</li>
+                    <li id="sculptures" onclick="controls.ChangeSortType('sculptures')">Sculpturen</li>
+                    <li id="mostviewed" onclick="controls.ChangeSortType('mostviewed')">Meest bekeken</li>
+                    <li id="alphabetic" onclick="controls.ChangeSortType('alphabetic')">A-Z</li>
+                </ul>
+            </section>
+            <section>
+                <div class="paintings"></div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <h3>Wie is Bijnens A.rt?</h3>
+                    <p>
+                        Bijnens Anja is een kunstenares die vormen, lijnen, structuren en abstracte figuren 
+                        gebruikt en dit zowel op doek als op sculpturen. Voor elke vorm gebruikt ze tot 4 lagen verf en dit in felle kleuren. Waardoor er
+                        in elk schilderij of sculptuur heel wat werk kruipt. Bij de afwerking gebruikt ze een stiptechniek "Dotpainting".
+                    </p>
+                </div>
+                <span class="spacer"></span>
+                <div class="col">
+                        <h3>Gegevens</h3>
+                        <div class="contact">
+                            <img src="Images/Main/phoneIcon.png" alt="Telefoon logo">
+                            <span>0494 99 39 71</span>
+                        </div>
+                        <div class="contact">
+                            <img src="Images/Main/emailIcon.png" alt="Email logo">
+                            <span>anja.bijnens@outlook.com</span>
+                        </div>
+                        <div class="contact link" onclick="Controls.redirect('Instagram')">
+                            <img src="Images/Main/instagramIcon.png" alt="Instagram logo">
+                            <span>Instagram</span>
+                        </div>
+                        <div class="contact link" onclick="Controls.redirect('Facebook')">
+                            <img src="Images/Main/facebookIcon.png" alt="Facebook logo">
+                            <span>Facebook</span>
+                        </div>
+                </div>
+                <span class="spacer"></span>
+                <div class="col">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Info.html">Info</a></li>
+                            <li><a href="Art.html">Kunstwerken</a></li>
+                            <li><a href="Contact.html">Contact</a></li>
+                            <li><a href="Login.html">Login</a></li>
+                        </ul>
+                        <span>Blijf op de hoogte!</span>
+                        <div class="subscribe">
+                            <input type="text" placeholder="email">
+                            <button>Subscribe</button>
+                        </div>
+                </div>
+            </div>
+            
+
+            <h4>BijnensArt since 2019 - Copyright Ⓒ All rights reserved - Website design provided by Wannes Schillebeeckx</h4>
+        </footer>
+        <script src="JavaScript/Gallery.js"></script>
+        <script defer src="JavaScript/Shared.js"></script>
+    </body>
+</html>

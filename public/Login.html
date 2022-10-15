@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>BijnensArt - Login</title>
+        <link rel="icon" href="Images/Main/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Charmonman&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Qwigley&display=swap" rel="stylesheet">
+        <meta name="keywords" content="art, kunst, abstract, schilderijen, kunstwerken, sculpturen, dotpainting, kleuren, cirkels, vormen, symbolen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="CSS/Desktop/Login.css">
+        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="CSS/Phone/Login.css">
+    </head>
+    
+    <body>
+
+        <div class="backgroundImage"></div>
+        <div class="message"></div>
+
+        <main>
+            <div><a href="index.html" class="logo">BijnensArt</a></div>
+
+            <div class="loginWrapper">
+                <h1>Welkom</h1>
+
+                <div class="inputWrapper">
+                    <input type="text" placeholder="Gebruikersnaam" id="login-username">
+                    <div class="passwordWrapper">
+                        <input type="password" placeholder="Wachtwoord" id="login-password">
+                        <img src="Images/Main/showpassIcon.png" alt="Wachtwoord laten zien knop" class="login-password" id="login-showPassword" onclick="controls.ShowPassword(this, false)">
+                        <img src="Images/Main/hidepassIcon.png" alt="Wachtwoord verstoppen knop" class="login-password" id="login-hidePassword" onclick="controls.ShowPassword(this, true)">
+                    </div>
+                </div>
+
+                <button onclick="controls.Login()">Log in</button>
+
+                <div class="btnWrapper">
+                    <button class="forgot">Gebruikersnaam vergeten?</button>
+                    <button class="forgot">Wachtwoord vergeten?</button>
+                    <button class="registerBtn">Nog geen Account? <span onclick="controls.OpenRegisterForm()">Maak er een.</span></button>
+                </div>
+
+            </div>
+
+            <div class="registerWrapper">
+
+                <h1>Registreren</h1>
+
+                <div class="inputWrapper">
+
+                    <div class="row">
+                        <input type="text" placeholder="Naam*" class="textInput" id="registername">
+                        <input type="text" placeholder="Voornaam*" class="textInput" id="registerprename">
+                        <input type="text" placeholder="Gebruikersnaam*" class="textInput" id="registerusername">
+                    </div>
+
+                    <div class="row">
+                        <input type="email" placeholder="Email*" class="textInput" id="registeremail">
+                        <div class="passwordWrapper">
+                            <input type="password" id="register-password" placeholder="Wachtwoord*">
+                            <img src="Images/Main/showpassIcon.png" alt="Wachtwoord laten zien knop" class="register-password" id="register-showPassword" onclick="controls.ShowPassword(this, false)">
+                            <img src="Images/Main/hidepassIcon.png" alt="Wachtwoord verstoppen knop" class="register-password" id="register-hidePassword" onclick="controls.ShowPassword(this, true)">
+                        </div>
+                        <div class="passwordWrapper">
+                            <input type="password" id="register-confirmPassword" placeholder="Bevestig Wachtwoord*">
+                            <img src="Images/Main/showpassIcon.png" alt="Wachtwoord laten zien knop" class="register-confirmPassword" id="register-showconfirmPassword" onclick="controls.ShowPassword(this, false)">
+                            <img src="Images/Main/hidepassIcon.png" alt="Wachtwoord verstoppen knop" class="register-confirmPassword" id="register-hideconfirmPassword" onclick="controls.ShowPassword(this, true)">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btnWrapper">
+                    <button id="registerBtn" onclick="controls.RegisterBtn()">Registreer</button>
+                    <button id="returnBtn" onclick="controls.ReturnToLogin()">Terug</button>
+                </div>
+                <div class="usersagreement">Door op registreer te klikken ga je akkoord met onze <span id="agreement">Algemene voorwaarden.</span></div>
+            </div>
+
+        </main>
+
+        <script src="JavaScript/Login.js"></script>
+        
+    </body>
+</html>
